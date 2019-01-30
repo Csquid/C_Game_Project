@@ -13,3 +13,16 @@ typedef struct pos
 		this->y = _y;
 	}
 } Pos;
+
+typedef struct _bullets
+{
+	Pos curPos;
+} Bullets;
+
+//CirCle_Doubly_Linked_List
+typedef struct _node
+{
+	struct _bullets bull;
+	struct _node* next;
+	struct _node* prev;
+} Node;

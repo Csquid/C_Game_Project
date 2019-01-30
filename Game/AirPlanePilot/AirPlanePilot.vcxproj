@@ -143,8 +143,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Fun.cpp" />
+    <ClCompile Include="CircularDoublyLinkedList.cpp" />
+    <ClCompile Include="control.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="userControl.cpp" />
+    <ClCompile Include="View.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head.h" />

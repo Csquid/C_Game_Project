@@ -13,6 +13,9 @@ int main()
 	Pos PlanePos;
 	Pos Monster;
 
+	Node* tail = nullptr;
+	Node* cur = nullptr;
+
 	int** dpMapArray;
 
 	fopen_s(&fp, "./maps/default.txt", "rt");
@@ -27,6 +30,7 @@ int main()
 	{
 		Show_Map(mapMaxPos, dpMapArray);
 		Move_AirPlane(&PlanePos, mapMaxPos.x);
+		Bullet(PlanePos, &tail, cur);
 		Show_Monster();
 		Sleep(66);
 		Clear();
