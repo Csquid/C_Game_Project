@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="fun.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="tetris.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="head.h" />

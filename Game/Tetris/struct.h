@@ -1,5 +1,20 @@
-#include "head.h"
+/*
+**** dou ==> double
+**** tri ==> triple
+**** defPointer ==> default Pointer
+**** curPointer ==> current Pointer
+*/
 
+enum Color {
+	Black,
+	Blue = 9,
+	Green,
+	Sky,
+	Red,
+	Purple,
+	Yello,
+	White
+};
 typedef struct pos
 {
 	int x;
@@ -17,6 +32,12 @@ typedef struct tetris
 {
 	Pos MapPos;
 	
-	void showMap(int** dPointer, Pos MaxMapPos);
-	void ShowFigure(int** dPointer, Pos* figurePos, int figuresKind);
+	void Init_Default_Map(int*** triDefPointer, Pos* mapMaxPos);
+	void Init_Current_Map(int*** triCurPointer, int** douDefPointer, Pos mapMaxPos);
+
+	void SetCurrentMap(int** dPointer, int*** curPointer, Pos CurPos);
+	void showMap(int** douDefPointer, Pos maxMapPos);
+	void ShowCurrentMap(int** douCurPointer, Pos maxMapPos);
+	void ShowFigure(int** douDefPointer, Pos* figurePos, int figuresKind, struct tetris* firstTetris);
+	void moveFigure(int** douDefPointer, Pos* figurePos, int figuresKind);
 } Tetris;
